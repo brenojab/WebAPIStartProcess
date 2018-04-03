@@ -10,16 +10,28 @@ using Microsoft.Extensions.Logging;
 
 namespace WebStartProcess
 {
-    public class Program
+  public class Program
+  {
+    public static void Main(string[] args)
     {
-        public static void Main(string[] args)
-        {
-            BuildWebHost(args).Run();
-        }
+      //var pathToExe = Process.GetCurrentProcess().MainModule.FileName;
+      //var pathToContentRoot = Path.GetDirectoryName(pathToExe);
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .UseStartup<Startup>()
-                .Build();
+      //var host = WebHost.CreateDefaultBuilder(args)
+      //    .UseContentRoot(pathToContentRoot)
+      //    .UseStartup<Startup>()
+      //    .UseApplicationInsights()
+      //    .Build();
+
+      //host.RunAsService();
+
+
+      BuildWebHost(args).Run();
     }
+
+    public static IWebHost BuildWebHost(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+            .UseStartup<Startup>()
+            .Build();
+  }
 }
