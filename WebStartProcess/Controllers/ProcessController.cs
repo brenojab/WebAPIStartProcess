@@ -25,7 +25,7 @@ namespace WebStartProcess.Controllers
       if (string.Compare(id.ToUpper(), "ATUAL") == 0)
         _hostPath = @"C:\RM\Atual\Release\bin\RM.Host.exe";
       else
-        _hostPath = $@"C:\RM\legado\{id}\bin\RM.Host.txt";
+        _hostPath = $@"C:\RM\legado\{id}\bin\RM.Host.exe";
 
       
 
